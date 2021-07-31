@@ -9,17 +9,17 @@ describe('usePolling specs', () => {
     // Assert
     expect(result.current.count).toEqual(0);
   });
-  it('should return count equals 1 when it waits for next update', async () => {
-    // Arrange
+  // it('should return count equals 1 when it waits for next update', async () => {
+  //   // Arrange
 
-    // Act
-    const { result, waitForValueToChange } = renderHook(() => usePolling());
+  //   // Act
+  //   const { result, waitForValueToChange } = renderHook(() => usePolling());
 
-    await waitForValueToChange(() => result.current.count === 3);
+  //   await waitForValueToChange(() => result.current.count === 3);
 
-    // Assert
-    expect(result.current.count).toEqual(3);
-  });
+  //   // Assert
+  //   expect(result.current.count).toEqual(3);
+  // });
   it('should call clearInterval when it unmounts the component', () => {
     // Arrange
     const clearIntervalStub = jest.spyOn(window, 'clearInterval');
